@@ -7,7 +7,7 @@ description: Biomeのlint/format設定ルール。対象ファイルの管理方
 
 ## チェック対象（include）
 
-`biome.json` の `files.include` で明示的に指定：
+`biome.json` の `files.includes` で明示的に指定（Biome v2 のキー名）：
 
 - `src/**/*.ts`
 - `src/**/*.tsx`
@@ -16,21 +16,14 @@ description: Biomeのlint/format設定ルール。対象ファイルの管理方
 
 これ以外のファイルはbiomeの対象外になる。
 
-## チェック対象外（ignore）
+## チェック対象外
 
-さらに `files.ignore` でも明示的に除外：
+`includes` を `src/**` に限定しているため、それ以外（設定ファイル・ドキュメント・ビルド成果物）は自動的に除外される。
 
-- `*.md` — ドキュメント・READMEなど
-- `*.json` — 設定ファイル（package.json, tsconfig.json, biome.json自身など）
-- `*.yaml` / `*.yml` — CI設定、その他
-- `*.toml` — 設定ファイル
-- `.claude/**` — Claude Code設定・スキル
-- `.ai-guide/**` — AI開発ガイドライン
-- `node_modules/**` — 依存パッケージ
-- `.next/**` — Next.jsビルド成果物
+Biome v2 では `ignore` キーは廃止。除外が必要な場合は `includes` 内に `!pattern` で記述する。
 
 ## ルール
 
-- `biome.json` を編集するときは、上記のignoreルールを維持すること
-- 新しい設定ファイル形式が増えた場合はignoreに追加する
+- `biome.json` を編集するときは `files.includes` のスコープ（`src/**`）を維持すること
+- Biome v2 では `include` / `ignore` は無効。必ず `includes` を使うこと
 - `pnpm run check` でCI上のlint + formatチェックが走る
