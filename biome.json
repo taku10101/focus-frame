@@ -1,5 +1,18 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
+  "files": {
+    "ignore": [
+      "*.md",
+      "*.json",
+      "*.yaml",
+      "*.yml",
+      "*.toml",
+      ".claude/**",
+      ".ai-guide/**",
+      "node_modules/**",
+      ".next/**"
+    ]
+  },
   "linter": {
     "enabled": true,
     "rules": {
