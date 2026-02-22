@@ -13,11 +13,6 @@
       "Bash(git add:*)",
       "Bash(gh:*)"
     ],
-    "deny": [
-      "Read(./.env)",
-      "Read(./.env.*)",
-      "Bash(rm -rf:*)",
-      "Bash(git push --force:*)"
-    ]
+    "deny": ["Read(./.env)", "Read(./.env.*)", "Bash(rm -rf:*)", "Bash(git push --force:*)"]
   }
 }
