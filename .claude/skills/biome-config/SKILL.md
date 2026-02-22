@@ -5,13 +5,20 @@ description: Biomeのlint/format設定ルール。対象ファイルの管理方
 
 # Biome 設定ルール
 
-## チェック対象
+## チェック対象（include）
 
-- `src/` 配下の `.ts`, `.tsx`, `.js`, `.jsx` ファイルのみ
+`biome.json` の `files.include` で明示的に指定：
+
+- `src/**/*.ts`
+- `src/**/*.tsx`
+- `src/**/*.js`
+- `src/**/*.jsx`
+
+これ以外のファイルはbiomeの対象外になる。
 
 ## チェック対象外（ignore）
 
-以下は `biome.json` の `files.ignore` で除外する：
+さらに `files.ignore` でも明示的に除外：
 
 - `*.md` — ドキュメント・READMEなど
 - `*.json` — 設定ファイル（package.json, tsconfig.json, biome.json自身など）
