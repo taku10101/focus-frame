@@ -10,11 +10,11 @@ FocusFrame - ドット絵リビール × ポモドーロタイマー PWA
 - PWA (Service Worker)
 
 ## コマンド
-- `bun dev` — 開発サーバー
-- `bun run build` — ビルド
-- `bun run lint` — Biome lint
-- `bun run check` — Biome check (lint + format)
-- `bun run format` — Biome format
+- `pnpm dev` — 開発サーバー
+- `pnpm run build` — ビルド
+- `pnpm run lint` — Biome lint
+- `pnpm run check` — Biome check (lint + format)
+- `pnpm run format` — Biome format
 
 ## ディレクトリ構成
 src/

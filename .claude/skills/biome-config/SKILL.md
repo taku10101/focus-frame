@@ -33,4 +33,4 @@ description: Biomeのlint/format設定ルール。対象ファイルの管理方
 
 - `biome.json` を編集するときは、上記のignoreルールを維持すること
 - 新しい設定ファイル形式が増えた場合はignoreに追加する
-- `bun run check` でCI上のlint + formatチェックが走る
+- `pnpm run check` でCI上のlint + formatチェックが走る
